@@ -3,21 +3,18 @@
 
 # sudeo code : take remainder of x lessthan 0 with 10 to get last digit and later do string concatenation 
 
-x = -123
+x = 1534236469
+num =abs(x)
 reverse_number = 0
-
-while x < 0:
-  x = -1 * x
-  r = x % 10
+sign = -1 if x < 0 else 1
+  
+while num > 0:
+  r = num % 10
   reverse_number = reverse_number * 10 + r
-  x = x // 10
+  num = num // 10
+  
+print(reverse_number * sign)
 
-while x > 0:
-  r = x % 10
-  reverse_number = reverse_number * 10 + r
-  x = x // 10
-
-print(reverse_number)
 
 
 
